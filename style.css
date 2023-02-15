@@ -1,0 +1,207 @@
+body{
+    overflow: hidden;
+}
+.container{
+    width: 100%;
+    min-height: 100vh;
+    background-color: rgb(226, 225, 225);
+
+}
+nav{
+    display: flex;
+    width: 100%;
+    justify-content: space-around;
+    height: 80px;
+    line-height: 80px;
+    z-index: 111;
+    background-color: white;
+
+}
+.logo{
+    display: flex;
+    font-size: 40px;
+    font-weight: 800;
+    color: rgb(218, 78, 199);
+    letter-spacing: 3px;
+    cursor: pointer;
+    text-transform: uppercase;
+}
+.logo b{
+    font-size: 70px;
+    color: rgb(159, 97, 218);
+
+}
+.navitems{
+    display: flex;
+}
+.navitems li{
+    list-style-type: none;
+    margin: 0 15px;
+
+}
+.navitems li a{
+    font-size: 25px;
+    color: rgb(218, 78, 199);
+    letter-spacing: 3px;
+    text-decoration: none;
+    text-transform: capitalize;
+
+}
+.navitems li a:hover,
+.links a:hover{
+    color: rgb(90, 53, 177)
+    }
+.links a{
+    font-size: 30px;
+    color: rgb(218, 34, 135);
+    margin: 25px  10px;
+}
+.wrapper{
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 80px);
+    justify-content:space-around;
+    align-items:center;
+    padding: 0 10%;
+    overflow: hidden;
+}
+.wrapper::before{
+    position: absolute;
+    content: '';
+    height:600px;
+    width: 600px;
+    border-radius: 50%;
+    left: -12%;
+    top: 40%;
+    background: linear-gradient(45deg,rgb(18, 41, 117),pink);
+    animation: object1 6s linear infinite
+}
+.wrapper::after{
+    position: absolute;
+    content: '';
+    height:200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 35%;
+    top: 12%;
+    background: linear-gradient(45deg,rgb(18, 41, 117),pink);
+    animation: object2 6s linear infinite
+
+}
+@keyframes object1{
+    50%{
+        left: -13%;
+        top: 41%;
+    }
+}
+@keyframes object2{
+    50%{
+        left: 35%;
+        top: 10%;
+    }
+}
+.cols{
+    
+    width: 50%;
+}
+
+.cols0{
+    width: 60%;
+    z-index:5 ;
+}
+
+.topline{
+    display: block;
+    position: relative;
+    font-size: 70px;
+    letter-spacing: 5px;
+    color: cadetblue;
+    top: 40px;
+}
+.topline::after{
+    position: absolute;
+    content: '';
+    height: 4px;
+    width: 45px;
+    bottom: 10px;
+    background-color: rgb(218, 78, 199);
+}
+h1{
+    display: block;
+    font-size: 7em;
+    font-weight: 900;
+
+}
+.multitext{
+    color: blueviolet;
+    text-transform: capitalize;
+}
+p{
+    display: block;
+    width: 90%;
+    font-size: 30px;
+    color:rgb(45, 23, 143)
+    
+}
+.btns{
+    width: 100%;
+    position: relative;
+    left: 150px;
+}
+button{
+    outline: none;
+    border: none;
+    cursor: pointer;
+    font-size: 25px;
+    font-weight: 400;
+    color: rgb(48, 34, 128);
+    background-color: blueviolet;
+    padding: 8px 14px ;
+    margin: 40px 5px;
+    letter-spacing: 2px;
+    text-transform: capitalize;
+    box-shadow: 0 15px 10px rgba(0, 0,0,0.4);
+
+}
+button:hover{
+    background-color: violet;
+}
+.imgbox{
+    position: relative;
+    width: 100%;
+    height: 100%;
+}
+.imgbox img{
+    position: relative;
+    height: 100%;
+    width: calc(130% - 80px);
+    top: -100px;
+    right: 50px;
+    transform: rotateY(180deg);
+    animation: animateuser 5s linear infinite;
+
+
+}
+@keyframes animateuser{
+    50%{
+        right: 30px;
+        top: -90px;
+    }
+}
+.imgbox #splash{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%) rotate(-35deg);
+    width: 160%;
+    filter: saturate(200%);
+    animation: animate 9s linear infinite;
+
+}
+@keyframes animate{
+    50%{
+        right: 49px;
+        top: 51px;
+        width: 155px;
+    }
+}
